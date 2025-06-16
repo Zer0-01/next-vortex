@@ -19,7 +19,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./avatar"
 
 export function AppNavBar() {
     return (
-        <header>
+        <header className="w-full">
             <NavigationMenu
 
                 viewport={false}>
