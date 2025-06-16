@@ -19,28 +19,26 @@ import { Avatar, AvatarFallback, AvatarImage } from "./avatar"
 
 export function AppNavBar() {
     return (
-        <NavigationMenu 
-        className="p-3 bg-primary w-full "
-        viewport={false}>
-            <NavigationMenuList>
-                <Link href="/">
-                    <Avatar>
-                        <Image
-                            src="/logo-vortex.png"
-                            alt="@shadcn"
-                            width={32}
-                            height={32}
-                            className="rounded-full"
-                        />
-                    </Avatar>
-                </Link>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/docs">About Us</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-            </NavigationMenuList>
-        </NavigationMenu>
+        <header>
+            <NavigationMenu
+
+                viewport={false}>
+                <NavigationMenuList>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                            <Link href="/docs">About Us</Link>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                            <Link href="/docs">About Us</Link>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+        </header>
+
     )
 }
 
