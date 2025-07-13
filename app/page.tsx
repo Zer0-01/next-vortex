@@ -1,11 +1,3 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
 
@@ -70,8 +62,5 @@ export default function Home() {
         <h1 className="text-center">Vortex Official Worldwide Store</h1>
       </section>
     </>
-
   );
 }
-
-
