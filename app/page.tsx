@@ -1,9 +1,14 @@
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
 
+import Headline from "@/components/headline";
+
 export default function Home() {
   return (
     <>
+      <section>
+        <Headline />
+      </section>
       <section className="grid grid-cols-12  gap-4">
         <div className="col-span-12 md:col-span-4 ">
           <Card className="py-4">
