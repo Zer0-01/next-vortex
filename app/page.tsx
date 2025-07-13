@@ -2,12 +2,14 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
 
 import Headline from "@/components/headline";
+import VortexTeamImage from "@/components/vortex-team-image";
 
 export default function Home() {
   return (
     <>
       <section>
         <Headline />
+        <VortexTeamImage />
       </section>
       <section className="grid grid-cols-12  gap-4">
         <div className="col-span-12 md:col-span-4 ">
