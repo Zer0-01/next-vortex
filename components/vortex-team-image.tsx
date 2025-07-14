@@ -6,8 +6,9 @@ function VortexTeamImage() {
   return (
     <Image
       alt="HeroUI hero Image"
-      className="w-full"
+      className="w-screen"
       src={imagevortexbanner.src}
+      width={2180}
     />
   );
 }
