@@ -7,24 +7,14 @@ interface NewsCardProps {
   description: string;
 }
 
-function NewsCard({ image, title, description }: NewsCardProps) {
+function NewsCard({ image, title }: NewsCardProps) {
   return (
-    <Card className="py-4">
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-tiny uppercase font-bold">Daily Mix</p>
-        <small className="text-default-500">12 Tracks</small>
-        <h4 className="font-bold text-large">Frontend Radio</h4>
+    <Card>
+      <CardHeader>
+        <Image alt="Card background" src={image} width={270} />
       </CardHeader>
-      <CardBody className="overflow-visible py-2">
-        <p className="text-tiny uppercase font-bold">Daily Mix</p>
-        <small className="text-default-500">12 Tracks</small>
-        <h4 className="font-bold text-large">Frontend Radio</h4>
-        <Image
-          alt="Card background"
-          className="object-cover rounded-xl"
-          src="https://heroui.com/images/hero-card-complete.jpeg"
-          width={270}
-        />
+      <CardBody>
+        <h4>{title}</h4>
       </CardBody>
     </Card>
   );
