@@ -7,7 +7,8 @@ import NewsCard from "./news-card";
 function NewsList() {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 my-10">
+        <div />
         <NewsCard
           description=""
           image={imageNews1.src}
@@ -15,6 +16,7 @@ function NewsList() {
         />
         <NewsCard description="" image={imageNews2.src} title="" />
         <NewsCard description="" image={imageNews3.src} title="" />
+        <div />
       </div>
     </>
   );
