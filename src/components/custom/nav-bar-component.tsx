@@ -14,7 +14,7 @@ import { Menu } from "lucide-react";
 const NavbarComponent = () => {
     return (
         <header className="border-b bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <div className=" px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                 {/* Brand */}
                 <div className="text-xl font-bold">Vortex Academia</div>
 
@@ -41,7 +41,7 @@ const NavbarComponent = () => {
                                 <Menu size={24} />
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-64">
+                        <SheetContent side="right" className="w-full">
                             <NavigationMenu orientation="vertical">
                                 <NavigationMenuList className="flex flex-col space-y-4">
                                     <NavigationMenuItem>
