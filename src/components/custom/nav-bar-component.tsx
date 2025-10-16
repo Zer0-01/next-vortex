@@ -13,7 +13,7 @@ import { Menu } from "lucide-react";
 
 const NavbarComponent = () => {
     return (
-        <header className="border-b bg-white">
+        <header className=" bg-background">
             <div className=" px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
                 {/* Brand */}
                 <div className="text-xl font-bold">Vortex Academia</div>

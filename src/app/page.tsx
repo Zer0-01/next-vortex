@@ -1,8 +1,12 @@
 import ImageHeadlineComponent from "@/components/custom/image-headline-component";
-import Image from "next/image";
+import MatchCenterSectionComponent from "@/components/custom/match-center-section-component";
 
 export default function Home() {
   return (
-    <ImageHeadlineComponent />
+    <div>
+      <ImageHeadlineComponent />
+      <MatchCenterSectionComponent />
+    </div>
+
   );
 }
