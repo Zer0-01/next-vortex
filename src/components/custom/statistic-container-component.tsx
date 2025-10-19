@@ -7,7 +7,7 @@ interface StatisticContainerComponentProps {
 const StatisticContainerComponent = ({ title, subtitle }: StatisticContainerComponentProps) => {
     return (
         <div className="flex flex-col  justify-center items-center bg-amber-300 rounded-md px-8 py-2">
-            <div className="text-white text-6xl font-bold">
+            <div className="text-white text-2xl font-bold">
                 {title}
             </div>
             <div>
