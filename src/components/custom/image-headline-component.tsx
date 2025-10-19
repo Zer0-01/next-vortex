@@ -4,7 +4,7 @@ import StatisticContainerComponent from "./statistic-container-component";
 
 const ImageHeadlineComponent = () => {
     return (
-        <div className="grid  bg-blue-600 p-4 justify-items-center gap-12 ">
+        <div className="grid  bg-blue-600 p-8 justify-items-center gap-12 ">
             <h1 className="text-white text-6xl  font-bold text-center">
                 VORTEX ACADEMIA
             </h1>
