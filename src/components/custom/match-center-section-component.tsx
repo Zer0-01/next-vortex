@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardAction, CardContent, CardFooter, CardHeader } from "../ui/card";
 
 const MatchCenterSectionComponent = () => {
     return (

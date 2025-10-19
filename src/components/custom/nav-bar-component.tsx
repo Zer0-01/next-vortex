@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "../ui/button";
 import {
     NavigationMenu,
 
@@ -8,13 +7,13 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
 } from "../ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
 
 const NavbarComponent = () => {
     return (
         <header className=" bg-background">
-            <div className=" px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <div className="hidden  md:flex flex-row justify-center items-center gap-2 p-4">
                 {/* Brand */}
                 <div className="text-xl font-bold">Vortex Academia</div>
 
@@ -34,30 +33,34 @@ const NavbarComponent = () => {
                 </NavigationMenu>
 
                 {/* Mobile Hamburger */}
-                <div className="md:hidden">
-                    <Sheet>
-                        <SheetTrigger asChild>
-                            <Button variant="ghost">
-                                <Menu size={24} />
-                            </Button>
-                        </SheetTrigger>
-                        <SheetContent side="right" className="w-full">
-                            <NavigationMenu orientation="vertical">
-                                <NavigationMenuList className="flex flex-col space-y-4">
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink href="/">Home</NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink href="/our-team">Our Team</NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink href="/our-athletes">Our Athletes</NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                </NavigationMenuList>
-                            </NavigationMenu>
-                        </SheetContent>
-                    </Sheet>
-                </div>
+
+            </div>
+            <div className="flex justify-between items-center   md:hidden p-4 ">
+                <div className="text-xl font-bold">Vortex Academia</div>
+
+                <Sheet>
+                    <SheetTrigger><Menu /></SheetTrigger>
+                    <SheetContent className="w-full border-0">
+                        <SheetHeader>
+                            <SheetTitle>Vortex Academia</SheetTitle>
+                            <SheetDescription>
+                                <NavigationMenu >
+                                    <NavigationMenuList className="flex flex-col gap-4  items-start text-foreground">
+                                        <NavigationMenuItem>
+                                            <NavigationMenuLink href="/">Home</NavigationMenuLink>
+                                        </NavigationMenuItem>
+                                        <NavigationMenuItem>
+                                            <NavigationMenuLink href="/our-team">Our Team</NavigationMenuLink>
+                                        </NavigationMenuItem>
+                                        <NavigationMenuItem>
+                                            <NavigationMenuLink href="/our-athletes">Our Athletes</NavigationMenuLink>
+                                        </NavigationMenuItem>
+                                    </NavigationMenuList>
+                                </NavigationMenu>
+                            </SheetDescription>
+                        </SheetHeader>
+                    </SheetContent>
+                </Sheet>
             </div>
         </header>
     );
