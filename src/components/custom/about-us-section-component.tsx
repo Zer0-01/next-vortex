@@ -1,3 +1,5 @@
+import { Button } from "../ui/button"
+
 const AboutUsSectionComponent = () => {
     return (
         <div className="flex flex-col bg-white mt-16 items-center ">
@@ -10,6 +12,8 @@ const AboutUsSectionComponent = () => {
                 We’re a team built on trust, laughter, and shared memories — where every match reminds us why we play: for the love of the game and the brotherhood that comes with it.
                 Our journey continues, not just as teammates, but as lifelong friends chasing the same passion together.
             </h2>
+
+            <Button className="mt-8">Learn More About Us</Button>
         </div>
     )
 }
