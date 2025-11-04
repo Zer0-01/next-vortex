@@ -16,7 +16,7 @@ const ImageHeadlineComponent = () => {
             <h1 className="text-white text-4xl  font-bold text-center">
                 CLUB OF THE CENTURY
             </h1>
-            <div className="grid grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
                 <StatisticContainerComponent title="4" subtitle="Championships" />
                 <StatisticContainerComponent title="4" subtitle="Championships" />
                 <StatisticContainerComponent title="4" subtitle="Championships" />
