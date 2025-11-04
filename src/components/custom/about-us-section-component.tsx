@@ -13,7 +13,7 @@ const AboutUsSectionComponent = () => {
                 Our journey continues, not just as teammates, but as lifelong friends chasing the same passion together.
             </h2>
 
-            <Button className="mt-8">Learn More About Us</Button>
+            <Button className="my-8">Learn More About Us</Button>
         </div>
     )
 }

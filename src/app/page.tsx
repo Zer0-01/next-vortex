@@ -1,5 +1,6 @@
 import AboutUsSectionComponent from "@/components/custom/about-us-section-component";
 import HeadlineComponent from "@/components/custom/headline-component";
+import OurTeamSectionComponent from "@/components/custom/our-team-section-component";
 
 
 export default function Home() {
@@ -7,6 +8,8 @@ export default function Home() {
     <div className="flex flex-col">
       <HeadlineComponent />
       <AboutUsSectionComponent />
+      <OurTeamSectionComponent />
+
 
     </div>
 
