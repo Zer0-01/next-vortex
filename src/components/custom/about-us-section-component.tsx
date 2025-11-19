@@ -2,7 +2,7 @@ import { Button } from "../ui/button"
 
 const AboutUsSectionComponent = () => {
     return (
-        <div className="flex flex-col bg-white mt-16 items-center ">
+        <div className="flex flex-col bg-white  items-center ">
             <h1 className="text-black text-3xl text-center pt-8 px-8">
                 Born from Friendship, United by Passion
             </h1>

@@ -4,41 +4,37 @@ import TeamImage from "../../../public/images/image-team.jpg";
 
 const HeadlineComponent = () => {
     return (
-        <section className="relative flex min-h-[70vh] flex-col items-center justify-center text-center p-6 sm:p-10">
+        <section className="relative flex h-screen flex-col items-center justify-center text-center p-6 sm:p-10 md:p-14 overflow-hidden">
+
+            {/* Background Image */}
             <Image
                 src={TeamImage}
-                alt="Football team training under lights"
+                alt="Football team training"
                 fill
-                style={{ objectFit: 'cover' }}
+                sizes="100vw"
+                className="object-cover object-center"
                 priority
-                className="z-0"
-                // The 'sizes' prop is often less critical when using local imports 
-                // but kept here for responsive performance guidance.
-                sizes="(max-width: 768px) 100vw, 50vw"
             />
 
-            <div className="absolute inset-0 bg-black/60 z-10"></div>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/60 md:bg-black/50 backdrop-blur-sm z-10" />
 
-            <div className="relative z-20 flex flex-col items-center max-w-xl py-16">
-
-                <h1 className="text-4xl font-extrabold tracking-tight text-white leading-tight sm:text-5xl">
+            {/* Content */}
+            <div className="relative z-20 flex flex-col items-center max-w-2xl px-4 md:px-6">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-xl">
                     Where Future Champions Are Born
                 </h1>
 
-                <p className="text-lg text-white/90 mt-5 max-w-md leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-white/90 mt-4 md:mt-6 max-w-md md:max-w-lg leading-relaxed drop-shadow">
                     Train hard. Play smart. Be part of a football family that builds tomorrow’s stars.
                 </p>
 
                 <Button
-                    className="mt-10 bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-5 rounded-full shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+                    className="mt-8 md:mt-10 bg-pink-600 hover:bg-pink-600/90 text-white text-base md:text-lg px-8 py-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.04]"
                     role="link"
                 >
                     Contact Us to Join the Team
                 </Button>
-
-                <div className="mt-6 text-sm text-white/70">
-                    Programs available for all ages.
-                </div>
             </div>
         </section>
     );
