@@ -1,4 +1,4 @@
-import HeadlineComponent from "@/components/custom/headline-component";
+import HeadlineComponent from "@/app/components/headline-component";
 import OurTeamSectionComponent from "./components/our-team-section-component";
 
 
