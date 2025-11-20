@@ -2,8 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const MatchCenterSectionComponent = () => {
     return (
-        <section className="p-6 md:p-10 bg-[#0f0f0f] text-white">
-            <Card className="bg-[#141414] border border-white/10 shadow-xl rounded-2xl">
+        <section className="p-6 md:p-10 bg-[#0f0f0f] text-white flex justify-center">
+            <Card className="w-full max-w-4xl bg-[#141414] border border-white/10 shadow-xl rounded-2xl">
                 <CardContent className="p-6 md:p-10 flex flex-col gap-8 md:gap-10">
 
                     <div className="text-center">
@@ -27,7 +27,7 @@ const MatchCenterSectionComponent = () => {
                             </p>
                         </div>
 
-                        <div className="flex-1 flex justify-center ">
+                        <div className="flex-1 flex justify-center">
                             <p className="text-lg md:text-2xl font-semibold text-white text-center md:text-right">
                                 Batik Air
                             </p>

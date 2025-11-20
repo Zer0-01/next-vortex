@@ -17,22 +17,24 @@ const ProductSectionComponent = () => (
             Discover our premium range of products designed for quality, style, and performance.
         </p>
 
-        <div className="flex flex-col gap-6 mt-6 md:grid md:grid-cols-2 md:gap-8">
-            {products.map((product, index) => (
-                <div
-                    key={index}
-                    className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300"
-                >
-                    <Image
-                        src={product.image}
-                        alt={`Product ${index + 1}`}
-                        fill
-                        className="object-cover object-center"
-                        sizes="100vw"
-                        priority
-                    />
-                </div>
-            ))}
+        <div className="mt-6 flex justify-center">
+            <div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8 md:max-w-4xl w-full">
+                {products.map((product, index) => (
+                    <div
+                        key={index}
+                        className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                    >
+                        <Image
+                            src={product.image}
+                            alt={`Product ${index + 1}`}
+                            fill
+                            className="object-cover object-center"
+                            sizes="100vw"
+                            priority
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
 
         <div className="flex justify-center mt-8">
