@@ -61,12 +61,12 @@ const NavbarComponent = () => {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/our-team" className="text-lg font-medium hover:text-pink-600 transition-colors">
+                                <NavigationMenuLink href="/join" className="text-lg font-medium hover:text-pink-600 transition-colors">
                                     Our Team
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink href="/our-athletes" className="text-lg font-medium hover:text-pink-600 transition-colors">
+                                <NavigationMenuLink href="/join" className="text-lg font-medium hover:text-pink-600 transition-colors">
                                     Our Athletes
                                 </NavigationMenuLink>
                             </NavigationMenuItem>

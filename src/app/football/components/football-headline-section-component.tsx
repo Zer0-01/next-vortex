@@ -3,8 +3,13 @@
 import Image from "next/image";
 import ImageFootballHeadline from "../../../../public/images/image-team.jpg";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const FootballHeadlineSectionComponent = () => {
+    const router = useRouter();
+    const goToJoin = () => {
+        router.push("/join");
+    }
     return (
         <section className="relative flex h-[420px] md:h-[500px] w-full items-center justify-center overflow-hidden">
             {/* Background Image */}
@@ -32,6 +37,7 @@ const FootballHeadlineSectionComponent = () => {
                 </p>
 
                 <Button
+                    onClick={goToJoin}
                     className="mt-6 bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 md:px-10 md:py-4 rounded-full shadow-lg text-base md:text-lg transition-all"
                 >
                     Join the Team

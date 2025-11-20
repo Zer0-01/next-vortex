@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
     Carousel,
@@ -11,9 +12,14 @@ import ImageTeam1 from "../../../public/images/image-team-1.jpeg";
 import ImageTeam2 from "../../../public/images/image-team-2.jpeg";
 import ImageTeam3 from "../../../public/images/image-team-3.jpeg";
 import ImageTeam4 from "../../../public/images/image-team-4.jpeg";
+import { useRouter } from "next/navigation";
 
 const TeamSectionComponent = () => {
     const teamImages = [ImageTeam1, ImageTeam2, ImageTeam3, ImageTeam4];
+    const router = useRouter();
+    const goToJoin = () => {
+        router.push("/join");
+    }
 
     return (
         <section className="flex flex-col gap-8 md:gap-12 p-6 md:p-16 bg-white">
@@ -25,7 +31,7 @@ const TeamSectionComponent = () => {
             </p>
 
             <div className="flex justify-center">
-                <Button className="bg-pink-600 hover:bg-pink-600/90 text-white px-8 py-3 md:px-10 md:py-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <Button className="bg-pink-600 hover:bg-pink-600/90 text-white px-8 py-3 md:px-10 md:py-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-[1.03]" onClick={goToJoin}>
                     Learn More
                 </Button>
             </div>

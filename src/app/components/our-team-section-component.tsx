@@ -13,6 +13,10 @@ const OurTeamSectionComponent = () => {
         router.push("/football");
     }
 
+    const goToJoin = () => {
+        router.push("/join");
+    }
+
     return (
         <section className="flex flex-col gap-6 p-6 md:p-16">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight px-1">
@@ -52,7 +56,7 @@ const OurTeamSectionComponent = () => {
                         <h3 className="text-xl font-semibold drop-shadow-lg">
                             RUNNER
                         </h3>
-                        <Button className="mt-4 bg-pink-600 hover:bg-pink-600/90 text-white px-5 py-2.5 rounded-lg w-fit shadow-md">
+                        <Button className="mt-4 bg-pink-600 hover:bg-pink-600/90 text-white px-5 py-2.5 rounded-lg w-fit shadow-md" onClick={goToJoin}>
                             View Team
                         </Button>
                     </div>
@@ -71,7 +75,7 @@ const OurTeamSectionComponent = () => {
                         <h3 className="text-xl font-semibold drop-shadow-lg">
                             COMING SOON
                         </h3>
-                        <Button className="mt-4 bg-pink-600 hover:bg-pink-600/90 text-white px-5 py-2.5 rounded-lg w-fit shadow-md">
+                        <Button className="mt-4 bg-pink-600 hover:bg-pink-600/90 text-white px-5 py-2.5 rounded-lg w-fit shadow-md" onClick={goToJoin}>
                             Learn More
                         </Button>
                     </div>

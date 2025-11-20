@@ -1,7 +1,14 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Instagram, Twitter, Facebook } from "lucide-react";
 
 const FooterComponent = () => {
+    const router = useRouter();
+    const goToJoin = () => {
+        router.push("/join");
+    }
     return (
         <footer className="flex flex-col items-center gap-6 bg-black p-6 md:p-10 md:gap-8">
             <h1 className="text-white text-2xl md:text-3xl font-extrabold text-center leading-snug">
@@ -10,7 +17,9 @@ const FooterComponent = () => {
             <h2 className="text-white text-xl md:text-2xl font-semibold text-center leading-snug">
                 Join Us for Free
             </h2>
-            <Button className="bg-pink-600 hover:bg-pink-600/90 text-white px-6 py-3 rounded-full shadow-md w-fit">
+            <Button
+                onClick={goToJoin}
+                className="bg-pink-600 hover:bg-pink-600/90 text-white px-6 py-3 rounded-full shadow-md w-fit">
                 Join Vortex Free
             </Button>
             <h3 className="text-gray-400 text-sm md:text-base mt-2">

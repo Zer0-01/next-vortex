@@ -1,8 +1,15 @@
+"use client";
+
 import { Button } from "../../components/ui/button";
 import Image from "next/image";
 import TeamImage from "../../../public/images/image-team.jpg";
+import { useRouter } from "next/navigation";
 
 const HeadlineComponent = () => {
+    const router = useRouter();
+    const goToJoin = () => {
+        router.push("/join");
+    }
     return (
         <section className="relative flex h-screen flex-col items-center justify-center text-center p-6 sm:p-10 md:p-14 overflow-hidden">
 
@@ -32,6 +39,7 @@ const HeadlineComponent = () => {
                 <Button
                     className="mt-8 md:mt-10 bg-pink-600 hover:bg-pink-600/90 text-white text-base md:text-lg px-8 py-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.04]"
                     role="link"
+                    onClick={goToJoin}
                 >
                     Contact Us to Join the Team
                 </Button>
