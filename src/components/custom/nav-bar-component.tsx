@@ -9,14 +9,17 @@ import {
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Menu } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const NavbarComponent = () => {
+
+
     return (
         <header className="bg-background shadow-md">
             <div className="flex justify-between items-center p-4 md:px-10 md:py-6">
-                <div className="text-2xl md:text-3xl font-extrabold tracking-tight">
+                <Link href="/" className="text-2xl md:text-3xl font-extrabold tracking-tight hover:text-blue-600 transition-colors">
                     Vortex Academia
-                </div>
+                </Link>
 
                 <div className="md:hidden">
                     <Sheet>
