@@ -49,7 +49,7 @@ export function HeroSection({
           <HeroMotion delay={0.08}>
             <h1
               id="hero-heading"
-              className="font-heading text-[clamp(4rem,10vw,10rem)] font-extrabold uppercase leading-[0.82] tracking-[-0.045em]"
+              className="font-heading text-[clamp(4rem,10vw,10rem)] font-extrabold uppercase leading-[0.82] tracking-[-0.045em] lg:text-[clamp(5.5rem,8vw,7rem)]"
             >
               <span className="block">{headline.lead}</span>
               <span className="block text-primary">{headline.emphasis}</span>
