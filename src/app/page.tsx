@@ -1,3 +1,4 @@
+import { AboutSection } from "@/components/about-section";
 import { HeroSection } from "@/components/hero-section";
 import { SiteHeader } from "@/components/site-header";
 
@@ -30,7 +31,9 @@ export default function Home() {
           }}
           description="A Kuala Lumpur community brought together by football, running, and the habit of showing up for one another."
           images={heroImages}
+          communityHref="#about"
         />
+        <AboutSection />
       </main>
     </div>
   );
