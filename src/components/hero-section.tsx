@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Camera } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 
+import { InstagramIcon } from "@/components/brand-icons";
 import { HeroArc, HeroMotion } from "@/components/hero-motion";
 
 export type HeroImage = {
@@ -71,7 +72,7 @@ export function HeroSection({
                   rel="noreferrer"
                   className={`${actionClassName} bg-primary text-primary-foreground hover:bg-primary/90`}
                 >
-                  <Camera aria-hidden="true" className="size-4" />
+                  <InstagramIcon className="size-4" />
                   Follow on Instagram
                   <ArrowUpRight aria-hidden="true" className="size-4" />
                 </a>
@@ -81,7 +82,7 @@ export function HeroSection({
                   disabled
                   className={`${actionClassName} bg-primary text-primary-foreground`}
                 >
-                  <Camera aria-hidden="true" className="size-4" />
+                  <InstagramIcon className="size-4" />
                   Follow on Instagram
                   <ArrowUpRight aria-hidden="true" className="size-4" />
                 </button>

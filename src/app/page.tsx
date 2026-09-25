@@ -1,6 +1,9 @@
 import { AboutSection } from "@/components/about-section";
+import { ActivitySection } from "@/components/activity-section";
 import { HeroSection } from "@/components/hero-section";
 import { SiteHeader } from "@/components/site-header";
+
+const instagramHref = "https://www.instagram.com/vortexacademia_/";
 
 const heroImages = [
   {
@@ -20,7 +23,7 @@ const heroImages = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
+      <SiteHeader instagramHref={instagramHref} />
       <main id="main-content">
         <HeroSection
           eyebrow="Kuala Lumpur · Football + Running"
@@ -31,9 +34,11 @@ export default function Home() {
           }}
           description="A Kuala Lumpur community brought together by football, running, and the habit of showing up for one another."
           images={heroImages}
+          instagramHref={instagramHref}
           communityHref="#about"
         />
         <AboutSection />
+        <ActivitySection instagramHref={instagramHref} />
       </main>
     </div>
   );

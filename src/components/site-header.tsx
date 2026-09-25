@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+import { InstagramIcon } from "@/components/brand-icons";
+
 type SiteHeaderProps = {
   instagramHref?: string;
 };
@@ -33,6 +35,7 @@ export function SiteHeader({ instagramHref }: SiteHeaderProps) {
             rel="noreferrer"
             className={`${instagramClassName} hover:border-primary hover:text-primary`}
           >
+            <InstagramIcon className="size-4" />
             Instagram
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </a>
@@ -41,6 +44,7 @@ export function SiteHeader({ instagramHref }: SiteHeaderProps) {
             aria-label="Instagram link coming soon"
             className={`${instagramClassName} cursor-not-allowed text-muted-foreground`}
           >
+            <InstagramIcon className="size-4" />
             Instagram soon
             <ArrowUpRight aria-hidden="true" className="size-4" />
           </span>

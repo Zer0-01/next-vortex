@@ -1,4 +1,4 @@
-import { AboutReveal } from "@/components/about-motion";
+import { SectionReveal } from "@/components/section-reveal";
 
 const principles = [
   {
@@ -38,7 +38,7 @@ export function AboutSection() {
 
       <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--gutter-mobile)] py-[var(--section-space-mobile)] lg:px-[var(--gutter-desktop)] lg:py-[var(--section-space-desktop)]">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
-          <AboutReveal>
+          <SectionReveal>
             <p className="mb-6 flex items-center gap-3 text-label uppercase text-primary">
               <span aria-hidden="true" className="size-2 rounded-full bg-primary" />
               About Vortex
@@ -49,19 +49,19 @@ export function AboutSection() {
             >
               Built around showing up.
             </h2>
-          </AboutReveal>
+          </SectionReveal>
 
-          <AboutReveal delay={0.08} className="flex items-end lg:pb-2">
+          <SectionReveal delay={0.08} className="flex items-end lg:pb-2">
             <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl sm:leading-relaxed">
               Vortex Academia is a Kuala Lumpur community where football and
               running give us reasons to come together. We meet in different
               places, but the purpose stays the same: move, support one another,
               and make healthier habits easier to keep.
             </p>
-          </AboutReveal>
+          </SectionReveal>
         </div>
 
-        <AboutReveal delay={0.14} className="mt-14 border-t border-border lg:mt-20">
+        <SectionReveal delay={0.14} className="mt-14 border-t border-border lg:mt-20">
           <div className="grid lg:grid-cols-3">
             {principles.map((principle, index) => (
               <div
@@ -81,7 +81,7 @@ export function AboutSection() {
               </div>
             ))}
           </div>
-        </AboutReveal>
+        </SectionReveal>
       </div>
     </section>
   );
