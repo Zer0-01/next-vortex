@@ -17,7 +17,7 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="overflow-hidden bg-card">
+    <footer id="site-footer" className="scroll-mt-20 overflow-hidden bg-card">
       <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--gutter-mobile)] lg:px-[var(--gutter-desktop)]">
         <SectionReveal className="grid gap-8 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-16 lg:py-24">
           <div>
@@ -26,7 +26,7 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
               Stay in the loop
             </p>
             <h2 className="max-w-3xl font-heading text-[clamp(3rem,6vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.035em]">
-              See where we&apos;re
+              See where we&apos;re{" "}
               <span className="block text-primary">moving next.</span>
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -59,9 +59,6 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
               >
                 Vortex Academia
               </Link>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Kuala Lumpur · Football + Running
-              </p>
             </div>
 
             <p className="text-label uppercase text-muted-foreground">
@@ -74,7 +71,7 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="inline-flex min-h-11 items-center text-sm font-semibold transition-colors duration-fast hover:text-primary"
+                      className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-semibold transition-colors duration-fast hover:text-primary"
                     >
                       {link.label}
                     </a>
@@ -85,7 +82,7 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
                     href={instagramHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold transition-colors duration-fast hover:text-primary"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center gap-1.5 text-sm font-semibold transition-colors duration-fast hover:text-primary"
                   >
                     Instagram
                     <ArrowUpRight aria-hidden="true" className="size-3.5" />
