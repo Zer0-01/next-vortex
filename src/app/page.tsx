@@ -1,6 +1,7 @@
 import { AboutSection } from "@/components/about-section";
 import { ActivitySection } from "@/components/activity-section";
 import { HeroSection } from "@/components/hero-section";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const instagramHref = "https://www.instagram.com/vortexacademia_/";
@@ -40,6 +41,7 @@ export default function Home() {
         <AboutSection />
         <ActivitySection instagramHref={instagramHref} />
       </main>
+      <SiteFooter instagramHref={instagramHref} />
     </div>
   );
 }
