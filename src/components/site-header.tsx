@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { InstagramIcon } from "@/components/brand-icons";
@@ -23,8 +24,16 @@ export function SiteHeader({ instagramHref }: SiteHeaderProps) {
         <Link
           href="/"
           aria-label="Vortex Academia home"
-          className="font-heading text-xl font-extrabold uppercase leading-none tracking-[-0.02em]"
+          className="inline-flex items-center gap-3 font-heading text-xl font-extrabold uppercase leading-none tracking-[-0.02em]"
         >
+          <Image
+            src="/images/logo-dark.png"
+            alt=""
+            width={40}
+            height={40}
+            className="size-10 shrink-0"
+            priority
+          />
           Vortex Academia
         </Link>
 
