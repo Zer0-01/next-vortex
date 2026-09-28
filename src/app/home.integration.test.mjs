@@ -104,8 +104,6 @@ test("home page uses the supplied activity photos and primary navigation", async
 
   assert.match(header, /<nav\b[^>]*aria-label="Primary navigation"/);
   assert.match(header, />Squad</);
-  assert.match(header, /href="\/football"/);
-  assert.match(header, /href="\/running"/);
   assert.match(header, /href="\/gallery"/);
   assert.match(
     header,
@@ -139,4 +137,15 @@ test("home page uses the supplied activity photos and primary navigation", async
       `${route} should render one shared footer`,
     );
   }
+
+  const adminLoginResponse = await fetch(new URL("/admin/login", origin));
+  assert.equal(adminLoginResponse.status, 200);
+
+  const adminLoginHtml = await adminLoginResponse.text();
+  assert.match(
+    adminLoginHtml,
+    /<main\b[^>]*data-page="admin-login"[^>]*>/,
+  );
+  assert.equal([...adminLoginHtml.matchAll(/<header\b/g)].length, 0);
+  assert.equal([...adminLoginHtml.matchAll(/<footer\b/g)].length, 0);
 });

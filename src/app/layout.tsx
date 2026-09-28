@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Geist_Mono, Inter } from "next/font/google";
-
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import type { ReactNode } from "react";
 
 import "./globals.css";
-
-const instagramHref = "https://www.instagram.com/vortexacademia_/";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,17 +26,13 @@ export const metadata: Metadata = {
     "A Kuala Lumpur sports community for football, running, mutual support, and staying healthy together.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${barlowCondensed.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-background">
-        <SiteHeader />
-        <div className="flex flex-1 flex-col">{children}</div>
-        <SiteFooter instagramHref={instagramHref} />
-      </body>
+      <body className="min-h-full bg-background">{children}</body>
     </html>
   );
 }
