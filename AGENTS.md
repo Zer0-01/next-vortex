@@ -8,6 +8,8 @@ This is a Next.js 16 App Router project. Routes, layouts, and global styles live
 
 Use Tailwind CSS as the default styling system, shadcn/ui as the default component library, and Motion as the default animation library. Treat `DESIGN.md` as the authoritative visual and interaction guideline. Use the CSS variables in `src/app/globals.css` as design tokens; extend them there rather than scattering literal colors, spacing, or radii through components.
 
+Use TanStack Form for form logic. Use Zod for validation.
+
 Do not directly modify generated shadcn primitives in `src/components/ui/`. Compose, wrap, or specialize them outside that directory. Keep additions scalable, readable, maintainable, consistent, and aligned with established industry practices. Avoid “AI slop”: generic template sections, excessive gradients or decoration, unnecessary abstractions, repetitive copy, fabricated content, and styling that conflicts with the design system. Do not assume requirements, data, assets, APIs, or behavior. Inspect the repository first and ask when a material decision is unresolved.
 
 ## Build, Test, and Development Commands
