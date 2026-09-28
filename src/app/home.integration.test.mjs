@@ -148,4 +148,31 @@ test("home page uses the supplied activity photos and primary navigation", async
   );
   assert.equal([...adminLoginHtml.matchAll(/<header\b/g)].length, 0);
   assert.equal([...adminLoginHtml.matchAll(/<footer\b/g)].length, 0);
+  assert.match(adminLoginHtml, /<form\b[^>]*>/);
+  assert.match(
+    adminLoginHtml,
+    /<input\b(?=[^>]*name="email")(?=[^>]*autocomplete="email")[^>]*>/i,
+  );
+  assert.match(
+    adminLoginHtml,
+    /<input\b(?=[^>]*name="password")(?=[^>]*autocomplete="current-password")[^>]*>/i,
+  );
+  assert.match(adminLoginHtml, /<label\b[^>]*for="email"[^>]*>Email<\/label>/);
+  assert.match(
+    adminLoginHtml,
+    /<label\b[^>]*for="password"[^>]*>Password<\/label>/,
+  );
+  assert.match(
+    adminLoginHtml,
+    /<button\b(?=[^>]*type="button")(?=[^>]*aria-label="Show password")[^>]*>/,
+  );
+  assert.match(
+    adminLoginHtml,
+    /<button\b[^>]*type="submit"[^>]*>Sign in<\/button>/,
+  );
+  assert.match(
+    adminLoginHtml,
+    /<[^>]+(?=[^>]*role="status")(?=[^>]*aria-live="polite")[^>]*>/,
+  );
+  assert.doesNotMatch(adminLoginHtml, /Forgot password|Create account/);
 });
