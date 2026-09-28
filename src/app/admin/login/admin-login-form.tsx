@@ -3,7 +3,7 @@
 import { revalidateLogic, useForm } from "@tanstack/react-form";
 import { Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -27,9 +27,19 @@ const defaultValues: AdminLoginValues = {
 const unavailableMessage =
   "Authentication isn't connected yet. Your details were not sent.";
 
+const subscribeToHydration = () => () => {};
+const getClientHydrationSnapshot = () => true;
+const getServerHydrationSnapshot = () => false;
+
 export function AdminLoginForm() {
+  const isHydrated = useSyncExternalStore(
+    subscribeToHydration,
+    getClientHydrationSnapshot,
+    getServerHydrationSnapshot,
+  );
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState("");
+
   const form = useForm({
     defaultValues,
     validationLogic: revalidateLogic({
@@ -63,7 +73,8 @@ export function AdminLoginForm() {
           void form.handleSubmit();
         }}
       >
-        <FieldGroup>
+        <fieldset disabled={!isHydrated} className="contents">
+          <FieldGroup>
           <form.Field name="email">
             {(field) => {
               const errorId = `${field.name}-error`;
@@ -153,7 +164,8 @@ export function AdminLoginForm() {
               </Button>
             )}
           </form.Subscribe>
-        </FieldGroup>
+          </FieldGroup>
+        </fieldset>
       </form>
 
       <p

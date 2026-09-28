@@ -154,6 +154,10 @@ test("home page uses the supplied activity photos and primary navigation", async
   assert.match(adminLoginHtml, /<form\b[^>]*>/);
   assert.match(
     adminLoginHtml,
+    /<fieldset\b(?=[^>]*disabled(?:=""|(?=[ >])))[^>]*>/,
+  );
+  assert.match(
+    adminLoginHtml,
     /<input\b(?=[^>]*name="email")(?=[^>]*autocomplete="email")[^>]*>/i,
   );
   assert.match(
