@@ -56,14 +56,14 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
               <Link
                 href="/"
                 aria-label="Vortex Academia home"
-                className="inline-flex min-h-11 items-center gap-3 font-heading text-2xl font-extrabold uppercase leading-none tracking-[-0.02em] transition-colors duration-fast hover:text-primary"
+                className="inline-flex min-h-11 items-center gap-2.5 font-heading text-2xl font-extrabold uppercase leading-none tracking-[-0.02em] transition-colors duration-fast hover:text-primary"
               >
                 <Image
                   src="/images/logo-dark.png"
                   alt=""
-                  width={48}
-                  height={48}
-                  className="size-12 shrink-0"
+                  width={40}
+                  height={40}
+                  className="size-10 shrink-0 object-contain"
                 />
                 Vortex Academia
               </Link>

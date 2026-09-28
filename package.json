@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test": "node --test --test-force-exit src/app/*.test.mjs",
     "start": "next start",
     "lint": "eslint"
   },

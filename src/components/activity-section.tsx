@@ -15,9 +15,9 @@ const activities = [
     description:
       "We gather casually, arrange the teams, and turn our attention to the game when play begins. The session is organised and focused, with time to connect before kickoff and over food afterward.",
     image: {
-      src: "/images/hero/football-community.jpg",
-      alt: "A women's football team gathered in a huddle on an outdoor pitch",
-      objectPosition: "50% 50%",
+      src: "/images/team-photo-6.jpeg",
+      alt: "Vortex Academia football players gathered for a team photo on the pitch",
+      objectPosition: "50% 58%",
     },
     contact: {
       href: "https://wa.me/60179289440",
@@ -30,9 +30,9 @@ const activities = [
     description:
       "We stay together, adapt to different paces, and keep the run easy-going enough to talk along the way. After the miles, we make time for food, group photos, and the people beside us.",
     image: {
-      src: "/images/hero/running-community.jpg",
-      alt: "A group of friends running together outdoors",
-      objectPosition: "50% 45%",
+      src: "/images/apiz-running.jpeg",
+      alt: "Vortex Academia runners taking part in a road race",
+      objectPosition: "50% 43%",
     },
     contact: {
       href: "https://wa.me/601163952301",

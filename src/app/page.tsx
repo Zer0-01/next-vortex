@@ -8,16 +8,16 @@ const instagramHref = "https://www.instagram.com/vortexacademia_/";
 
 const heroImages = [
   {
-    src: "/images/hero/football-community.jpg",
-    alt: "A women's football team gathered in a huddle on an outdoor pitch",
+    src: "/images/hero/handshake.JPG",
+    alt: "Two Vortex Academia football players walking hand in hand on the pitch",
     label: "Football",
     objectPosition: "50% 50%",
   },
   {
-    src: "/images/hero/running-community.jpg",
-    alt: "A group of friends running together outdoors",
+    src: "/images/apiz-running.jpeg",
+    alt: "Vortex Academia runners taking part in a road race",
     label: "Running",
-    objectPosition: "50% 45%",
+    objectPosition: "50% 48%",
   },
 ] as const;
 

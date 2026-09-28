@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ type SiteHeaderProps = {
 };
 
 const instagramClassName =
-  "inline-flex min-h-11 items-center gap-2 rounded-md border border-border px-4 text-label uppercase tracking-[0.08em] transition-colors duration-fast";
+  "inline-flex size-11 items-center justify-center rounded-md border border-border transition-colors duration-fast";
 
 export function SiteHeader({ instagramHref }: SiteHeaderProps) {
   return (
@@ -24,14 +23,14 @@ export function SiteHeader({ instagramHref }: SiteHeaderProps) {
         <Link
           href="/"
           aria-label="Vortex Academia home"
-          className="inline-flex items-center gap-3 font-heading text-xl font-extrabold uppercase leading-none tracking-[-0.02em]"
+          className="inline-flex items-center gap-2.5 font-heading text-xl font-extrabold uppercase leading-none tracking-[-0.02em]"
         >
           <Image
             src="/images/logo-dark.png"
             alt=""
-            width={40}
-            height={40}
-            className="size-10 shrink-0"
+            width={36}
+            height={36}
+            className="size-9 shrink-0 object-contain"
             priority
           />
           Vortex Academia
@@ -42,20 +41,17 @@ export function SiteHeader({ instagramHref }: SiteHeaderProps) {
             href={instagramHref}
             target="_blank"
             rel="noreferrer"
+            aria-label="Follow Vortex Academia on Instagram"
             className={`${instagramClassName} hover:border-primary hover:text-primary`}
           >
-            <InstagramIcon className="size-4" />
-            Instagram
-            <ArrowUpRight aria-hidden="true" className="size-4" />
+            <InstagramIcon aria-hidden="true" className="size-5" />
           </a>
         ) : (
           <span
             aria-label="Instagram link coming soon"
             className={`${instagramClassName} cursor-not-allowed text-muted-foreground`}
           >
-            <InstagramIcon className="size-4" />
-            Instagram soon
-            <ArrowUpRight aria-hidden="true" className="size-4" />
+            <InstagramIcon aria-hidden="true" className="size-5" />
           </span>
         )}
       </div>
