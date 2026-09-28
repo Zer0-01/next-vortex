@@ -17,7 +17,7 @@ async function getExistingDevOrigin() {
   }
 }
 
-test("home page uses the supplied activity photos and an icon-only Instagram header link", async (t) => {
+test("home page uses the supplied activity photos and primary navigation", async (t) => {
   let origin = await getExistingDevOrigin();
 
   if (!origin) {
@@ -102,11 +102,41 @@ test("home page uses the supplied activity photos and an icon-only Instagram hea
   const header = html.match(/<header\b[\s\S]*?<\/header>/)?.[0];
   assert.ok(header, "expected the page to render a header");
 
-  const instagramLink = header.match(
-    /<a\b[^>]*href="https:\/\/www\.instagram\.com\/vortexacademia_\/"[^>]*>([\s\S]*?)<\/a>/,
+  assert.match(header, /<nav\b[^>]*aria-label="Primary navigation"/);
+  assert.match(header, />Squad</);
+  assert.match(header, /href="\/football"/);
+  assert.match(header, /href="\/running"/);
+  assert.match(header, /href="\/gallery"/);
+  assert.match(
+    header,
+    /<button\b[^>]*aria-label="Open navigation menu"[^>]*>/,
+  );
+  assert.doesNotMatch(
+    header,
+    /href="https:\/\/www\.instagram\.com\/vortexacademia_\/"/,
   );
 
-  assert.ok(instagramLink, "expected the Instagram link in the header");
-  assert.match(instagramLink[0], /aria-label="Follow Vortex Academia on Instagram"/);
-  assert.equal(instagramLink[1].replace(/<[^>]+>/g, "").trim(), "");
+  for (const [route, heading] of [
+    ["/football", "Football"],
+    ["/running", "Running"],
+    ["/gallery", "Gallery"],
+  ]) {
+    const routeResponse = await fetch(new URL(route, origin));
+    assert.equal(routeResponse.status, 200, `${route} should be available`);
+
+    const routeHtml = await routeResponse.text();
+    assert.match(routeHtml, new RegExp(`<h1[^>]*>${heading}<\\/h1>`));
+    assert.match(routeHtml, /Coming soon/);
+    assert.match(routeHtml, /href="\/"/);
+    assert.equal(
+      [...routeHtml.matchAll(/<header\b/g)].length,
+      1,
+      `${route} should render one shared header`,
+    );
+    assert.equal(
+      [...routeHtml.matchAll(/<footer\b/g)].length,
+      1,
+      `${route} should render one shared footer`,
+    );
+  }
 });

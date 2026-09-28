@@ -10,8 +10,8 @@ type SiteFooterProps = {
 };
 
 const footerLinks = [
-  { label: "About", href: "#about" },
-  { label: "Activities", href: "#activities" },
+  { label: "About", href: "/#about" },
+  { label: "Activities", href: "/#activities" },
 ] as const;
 
 export function SiteFooter({ instagramHref }: SiteFooterProps) {
@@ -77,12 +77,12 @@ export function SiteFooter({ instagramHref }: SiteFooterProps) {
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-semibold transition-colors duration-fast hover:text-primary"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
                 <li>
