@@ -45,12 +45,15 @@ export function AdminLoginForm() {
   });
 
   return (
-    <div className="w-full max-w-sm">
-      <div className="mb-8">
-        <p className="text-label uppercase text-primary">Admin access</p>
-        <h1 className="mt-2 font-heading text-5xl font-bold uppercase leading-none">
-          Admin login
+    <div className="w-full max-w-md">
+      <div className="mb-10">
+        <p className="text-label uppercase text-primary">Admin Access</p>
+        <h1 className="mt-3 font-heading text-heading-lg uppercase">
+          Welcome back
         </h1>
+        <p className="mt-4 max-w-sm text-body-md text-muted-foreground">
+          Sign in to access Vortex Academia administration.
+        </p>
       </div>
 
       <form
@@ -75,6 +78,7 @@ export function AdminLoginForm() {
                     type="email"
                     autoComplete="email"
                     value={field.state.value}
+                    className="h-12 bg-card px-4"
                     aria-describedby={hasErrors ? errorId : undefined}
                     aria-invalid={hasErrors}
                     onBlur={field.handleBlur}
@@ -104,7 +108,7 @@ export function AdminLoginForm() {
                       type={isPasswordVisible ? "text" : "password"}
                       autoComplete="current-password"
                       value={field.state.value}
-                      className="pr-12"
+                      className="h-12 bg-card px-4 pr-12"
                       aria-describedby={hasErrors ? errorId : undefined}
                       aria-invalid={hasErrors}
                       onBlur={field.handleBlur}
@@ -142,7 +146,7 @@ export function AdminLoginForm() {
               <Button
                 type="submit"
                 size="lg"
-                className="min-h-11 w-full"
+                className="min-h-12 w-full font-semibold"
                 disabled={isSubmitting}
               >
                 Sign in
@@ -155,14 +159,14 @@ export function AdminLoginForm() {
       <p
         role="status"
         aria-live="polite"
-        className="mt-4 min-h-6 text-sm text-muted-foreground"
+        className="mt-5 min-h-6 text-sm leading-6 text-muted-foreground"
       >
         {submissionMessage}
       </p>
 
       <Link
         href="/"
-        className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-muted-foreground underline decoration-border underline-offset-4 transition-colors duration-fast hover:text-foreground"
+        className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-muted-foreground underline decoration-border underline-offset-4 transition-colors duration-fast hover:text-foreground"
       >
         Back to website
       </Link>

@@ -141,7 +141,10 @@ test("home page uses the supplied activity photos and primary navigation", async
   const adminLoginResponse = await fetch(new URL("/admin/login", origin));
   assert.equal(adminLoginResponse.status, 200);
 
-  const adminLoginHtml = await adminLoginResponse.text();
+  const adminLoginHtml = (await adminLoginResponse.text()).replaceAll(
+    "%2F",
+    "/",
+  );
   assert.match(
     adminLoginHtml,
     /<main\b[^>]*data-page="admin-login"[^>]*>/,
@@ -173,6 +176,14 @@ test("home page uses the supplied activity photos and primary navigation", async
   assert.match(
     adminLoginHtml,
     /<[^>]+(?=[^>]*role="status")(?=[^>]*aria-live="polite")[^>]*>/,
+  );
+  assert.match(adminLoginHtml, />Vortex Academia</);
+  assert.match(adminLoginHtml, />Admin Access</);
+  assert.match(adminLoginHtml, />Welcome back</);
+  assert.match(adminLoginHtml, /<a\b[^>]*href="\/"[^>]*>Back to website<\/a>/);
+  assert.match(
+    adminLoginHtml,
+    /<img\b(?=[^>]*src="[^"]*\/images\/team-photo-5\.jpeg)(?=[^>]*alt="Vortex Academia football squad gathered on the pitch after a match\.")[^>]*>/,
   );
   assert.doesNotMatch(adminLoginHtml, /Forgot password|Create account/);
 });
