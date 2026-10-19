@@ -29,6 +29,8 @@
   --color-pitch: var(--pitch);
   --color-pitch-player: var(--pitch-player);
   --color-pitch-line: var(--pitch-line);
+  --color-track: var(--track);
+  --color-track-line: var(--track-line);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
@@ -100,6 +102,8 @@
   --pitch: #10271f;
   --pitch-player: #183d2d;
   --pitch-line: #648374;
+  --track: #2a1921;
+  --track-line: #9d7182;
   --border: transparent;
   --input: #1C1C1C;
   --ring: #F52D83;
