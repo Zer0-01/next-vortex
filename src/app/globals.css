@@ -44,7 +44,6 @@
 
   --font-sans: var(--font-body);
   --font-heading: var(--font-display);
-  --font-mono: var(--font-geist-mono);
 
   --text-display: var(--type-display-size);
   --text-display--font-weight: 700;
@@ -156,6 +155,22 @@
     outline: 2px solid var(--ring);
     outline-offset: 3px;
   }
+}
+
+[data-slot="sheet-overlay"] {
+  background: var(--background);
+  backdrop-filter: none;
+}
+
+[data-slot="sheet-content"],
+[data-slot="navigation-menu-content"] {
+  box-shadow: none;
+}
+
+[data-slot="navigation-menu-link"]:focus-visible,
+[data-slot="navigation-menu-trigger"]:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 import {
   Collapsible,
@@ -34,6 +36,8 @@ const mobileNavigationLinkClassName =
   "flex min-h-12 w-full items-center rounded-md px-4 text-base font-bold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="relative z-20 bg-card">
       <a
@@ -66,19 +70,35 @@ export function SiteHeader() {
         >
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="min-h-11 rounded-md px-4 font-semibold">
+              <NavigationMenuTrigger
+                className={cn(
+                  "min-h-11 rounded-md px-4 font-semibold",
+                  (pathname === "/football" || pathname === "/running") &&
+                    "text-primary",
+                )}
+              >
                 Squad
               </NavigationMenuTrigger>
               <NavigationMenuContent className="w-48 p-1">
                 <NavigationMenuLink
-                  render={<Link href="/football" />}
-                  className={navigationLinkClassName}
+                  render={
+                    <Link
+                      href="/football"
+                      aria-current={pathname === "/football" ? "page" : undefined}
+                    />
+                  }
+                  className={cn(navigationLinkClassName, pathname === "/football" && "text-primary")}
                 >
                   Football
                 </NavigationMenuLink>
                 <NavigationMenuLink
-                  render={<Link href="/running" />}
-                  className={navigationLinkClassName}
+                  render={
+                    <Link
+                      href="/running"
+                      aria-current={pathname === "/running" ? "page" : undefined}
+                    />
+                  }
+                  className={cn(navigationLinkClassName, pathname === "/running" && "text-primary")}
                 >
                   Running
                 </NavigationMenuLink>
@@ -86,8 +106,13 @@ export function SiteHeader() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                render={<Link href="/gallery" />}
-                className={navigationLinkClassName}
+                render={
+                  <Link
+                    href="/gallery"
+                    aria-current={pathname === "/gallery" ? "page" : undefined}
+                  />
+                }
+                className={cn(navigationLinkClassName, pathname === "/gallery" && "text-primary")}
               >
                 Gallery
               </NavigationMenuLink>
@@ -133,7 +158,13 @@ export function SiteHeader() {
                 className="flex flex-col gap-1 px-4 py-6"
               >
                 <Collapsible>
-                  <CollapsibleTrigger className="group/squad flex min-h-14 w-full items-center justify-between rounded-md px-4 font-heading text-2xl font-semibold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                  <CollapsibleTrigger
+                    className={cn(
+                      "group/squad flex min-h-14 w-full items-center justify-between rounded-md px-4 font-heading text-2xl font-semibold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+                      (pathname === "/football" || pathname === "/running") &&
+                        "text-primary",
+                    )}
+                  >
                     Squad
                     <ChevronDown
                       aria-hidden="true"
@@ -146,7 +177,11 @@ export function SiteHeader() {
                       render={
                         <Link
                           href="/football"
-                          className={mobileNavigationLinkClassName}
+                          aria-current={pathname === "/football" ? "page" : undefined}
+                          className={cn(
+                            mobileNavigationLinkClassName,
+                            pathname === "/football" && "text-primary",
+                          )}
                         />
                       }
                     >
@@ -157,7 +192,11 @@ export function SiteHeader() {
                       render={
                         <Link
                           href="/running"
-                          className={mobileNavigationLinkClassName}
+                          aria-current={pathname === "/running" ? "page" : undefined}
+                          className={cn(
+                            mobileNavigationLinkClassName,
+                            pathname === "/running" && "text-primary",
+                          )}
                         />
                       }
                     >
@@ -170,7 +209,11 @@ export function SiteHeader() {
                   render={
                     <Link
                       href="/gallery"
-                      className="flex min-h-14 w-full items-center rounded-md px-4 font-heading text-2xl font-semibold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      aria-current={pathname === "/gallery" ? "page" : undefined}
+                      className={cn(
+                        "flex min-h-14 w-full items-center rounded-md px-4 font-heading text-2xl font-semibold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+                        pathname === "/gallery" && "text-primary",
+                      )}
                     />
                   }
                 >
