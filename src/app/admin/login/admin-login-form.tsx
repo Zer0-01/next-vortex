@@ -57,8 +57,8 @@ export function AdminLoginForm() {
   return (
     <div className="w-full max-w-md">
       <div className="mb-10">
-        <p className="text-label uppercase text-primary">Admin Access</p>
-        <h1 className="mt-3 font-heading text-heading-lg uppercase">
+        <p className="text-label text-primary">Admin Access</p>
+        <h1 className="mt-3 font-heading text-heading-lg">
           Welcome back
         </h1>
         <p className="mt-4 max-w-sm text-body-md text-muted-foreground">
@@ -89,7 +89,7 @@ export function AdminLoginForm() {
                     type="email"
                     autoComplete="email"
                     value={field.state.value}
-                    className="h-12 bg-card px-4"
+                    className="h-12 border-0 bg-surface-raised px-4 focus-visible:ring-0 focus-visible:outline-2 focus-visible:outline-primary"
                     aria-describedby={hasErrors ? errorId : undefined}
                     aria-invalid={hasErrors}
                     onBlur={field.handleBlur}
@@ -119,7 +119,7 @@ export function AdminLoginForm() {
                       type={isPasswordVisible ? "text" : "password"}
                       autoComplete="current-password"
                       value={field.state.value}
-                      className="h-12 bg-card px-4 pr-12"
+                      className="h-12 border-0 bg-surface-raised px-4 pr-12 focus-visible:ring-0 focus-visible:outline-2 focus-visible:outline-primary"
                       aria-describedby={hasErrors ? errorId : undefined}
                       aria-invalid={hasErrors}
                       onBlur={field.handleBlur}
@@ -157,7 +157,7 @@ export function AdminLoginForm() {
               <Button
                 type="submit"
                 size="lg"
-                className="min-h-12 w-full font-semibold"
+                className="min-h-12 w-full rounded-md border-0 font-semibold hover:bg-primary-hover focus-visible:ring-0"
                 disabled={isSubmitting}
               >
                 Sign in
@@ -178,7 +178,7 @@ export function AdminLoginForm() {
 
       <Link
         href="/"
-        className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-muted-foreground underline decoration-border underline-offset-4 transition-colors duration-fast hover:text-foreground"
+        className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-muted-foreground transition-colors duration-fast hover:text-foreground"
       >
         Back to website
       </Link>

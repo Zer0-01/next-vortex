@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import { InstagramIcon } from "@/components/brand-icons";
-import { HeroArc, HeroMotion } from "@/components/hero-motion";
+import { HeroMotion } from "@/components/hero-motion";
 
 export type HeroImage = {
   src: string;
@@ -25,7 +25,7 @@ export type HeroSectionProps = {
 };
 
 const actionClassName =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 text-sm font-bold transition duration-fast disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 text-sm font-semibold transition duration-fast disabled:cursor-not-allowed disabled:opacity-60";
 
 export function HeroSection({
   eyebrow,
@@ -38,19 +38,19 @@ export function HeroSection({
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative isolate overflow-hidden border-b border-border/70"
+      className="relative overflow-hidden"
     >
       <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[var(--content-max)] items-center gap-12 px-[var(--gutter-mobile)] py-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(30rem,1.1fr)] lg:gap-16 lg:px-[var(--gutter-desktop)] lg:py-16">
         <div className="relative z-10 max-w-2xl">
           <HeroMotion delay={0}>
-            <p className="mb-6 text-label uppercase text-muted-foreground">
+            <p className="mb-6 text-label text-muted-foreground">
               {eyebrow}
             </p>
           </HeroMotion>
           <HeroMotion delay={0.08}>
             <h1
               id="hero-heading"
-              className="font-heading text-[clamp(4rem,10vw,10rem)] font-extrabold uppercase leading-[0.82] tracking-[-0.045em] lg:text-[clamp(5.5rem,8vw,7rem)]"
+              className="font-heading text-display font-bold leading-[1.05]"
             >
               <span className="block">{headline.lead}</span>
               <span className="block text-primary">{headline.emphasis}</span>
@@ -70,7 +70,7 @@ export function HeroSection({
                   href={instagramHref}
                   target="_blank"
                   rel="noreferrer"
-                  className={`${actionClassName} bg-primary text-primary-foreground hover:bg-primary/90`}
+                  className={`${actionClassName} bg-primary text-primary-foreground hover:bg-primary-hover`}
                 >
                   <InstagramIcon className="size-4" />
                   Follow on Instagram
@@ -91,7 +91,7 @@ export function HeroSection({
               {communityHref ? (
                 <a
                   href={communityHref}
-                  className={`${actionClassName} border border-border bg-secondary text-secondary-foreground hover:border-foreground/60`}
+                  className={`${actionClassName} bg-secondary text-secondary-foreground hover:bg-surface-hover`}
                 >
                   Explore the community
                   <ArrowDown aria-hidden="true" className="size-4" />
@@ -100,7 +100,7 @@ export function HeroSection({
                 <button
                   type="button"
                   disabled
-                  className={`${actionClassName} border border-border bg-secondary text-secondary-foreground`}
+                  className={`${actionClassName} bg-secondary text-secondary-foreground`}
                 >
                   Explore the community
                   <ArrowDown aria-hidden="true" className="size-4" />
@@ -116,14 +116,13 @@ export function HeroSection({
         </div>
 
         <div className="relative grid gap-4 sm:grid-cols-2 lg:block lg:h-[clamp(32rem,48vw,42rem)]">
-          <HeroArc />
 
           {images.map((image, index) => (
             <HeroMotion
               key={image.label}
               delay={0.18 + index * 0.1}
               variant="reveal"
-              className={`group relative aspect-[4/5] overflow-hidden rounded-lg border border-border bg-card lg:absolute lg:w-[58%] ${
+              className={`relative aspect-[4/5] overflow-hidden rounded-lg bg-card lg:absolute lg:w-[58%] ${
                 index === 0
                   ? "lg:left-0 lg:top-0"
                   : "lg:bottom-0 lg:right-0"
@@ -137,9 +136,9 @@ export function HeroSection({
                   loading="eager"
                   sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 46vw, 30vw"
                   style={{ objectPosition: image.objectPosition }}
-                  className="object-cover transition-transform duration-reveal ease-vortex group-hover:scale-[1.015]"
+                  className="object-cover"
                 />
-                <figcaption className="absolute bottom-3 left-3 rounded-sm border border-white/20 bg-background/85 px-3 py-2 text-label uppercase text-foreground backdrop-blur-sm">
+                <figcaption className="absolute bottom-3 left-3 rounded-sm bg-background px-3 py-2 text-label text-foreground">
                   {image.label}
                 </figcaption>
               </figure>

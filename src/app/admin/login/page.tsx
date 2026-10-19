@@ -20,7 +20,7 @@ export default function AdminLoginPage() {
         <Link
           href="/"
           aria-label="Vortex Academia home"
-          className="inline-flex min-h-11 w-fit items-center gap-3 font-heading text-xl font-extrabold uppercase leading-none tracking-[-0.02em]"
+          className="inline-flex min-h-11 w-fit items-center gap-3 font-heading text-xl font-semibold leading-none"
         >
           <Image
             src="/images/logo-dark.png"
@@ -38,7 +38,7 @@ export default function AdminLoginPage() {
         </div>
       </section>
 
-      <aside className="relative hidden min-h-svh overflow-hidden border-l border-border lg:block">
+      <aside className="relative hidden min-h-svh overflow-hidden lg:block">
         <Image
           src="/images/team-photo-5.jpeg"
           alt="Vortex Academia football squad gathered on the pitch after a match."
@@ -46,14 +46,6 @@ export default function AdminLoginPage() {
           sizes="(min-width: 1024px) 55vw, 0px"
           className="object-cover object-[54%_center]"
           preload
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-background/40"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-1 bg-primary/80"
         />
       </aside>
     </main>

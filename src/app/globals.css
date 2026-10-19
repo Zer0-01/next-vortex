@@ -22,6 +22,10 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-hover: var(--surface-hover);
+  --color-primary-hover: var(--primary-hover);
+  --color-disabled: var(--disabled);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
@@ -43,24 +47,24 @@
   --font-mono: var(--font-geist-mono);
 
   --text-display: var(--type-display-size);
-  --text-display--font-weight: 800;
-  --text-display--line-height: 0.88;
+  --text-display--font-weight: 700;
+  --text-display--line-height: 1.05;
   --text-heading-lg: var(--type-heading-lg-size);
-  --text-heading-lg--font-weight: 700;
-  --text-heading-lg--line-height: 0.95;
+  --text-heading-lg--font-weight: 600;
+  --text-heading-lg--line-height: 1.15;
   --text-body-md: 1rem;
   --text-body-md--line-height: 1.6;
-  --text-label: 0.75rem;
-  --text-label--font-weight: 700;
-  --text-label--letter-spacing: 0.08em;
+  --text-label: 0.875rem;
+  --text-label--font-weight: 600;
+  --text-label--line-height: 1.4;
 
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
   --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
-  --radius-2xl: 2rem;
-  --radius-3xl: 2.5rem;
-  --radius-4xl: 3rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1rem;
+  --radius-4xl: 1rem;
 
   --ease-vortex: var(--motion-easing);
   --duration-fast: var(--motion-fast);
@@ -71,61 +75,65 @@
 :root {
   color-scheme: dark;
 
-  --background: #0B0B0F;
-  --foreground: #F7F4F6;
-  --card: #15151C;
-  --card-foreground: #F7F4F6;
-  --popover: #15151C;
-  --popover-foreground: #F7F4F6;
-  --primary: #FF2E93;
-  --primary-foreground: #0B0B0F;
-  --secondary: #15151C;
-  --secondary-foreground: #F7F4F6;
-  --muted: #15151C;
-  --muted-foreground: #B9B6BE;
-  --accent: #FFE5F3;
-  --accent-foreground: #0B0B0F;
-  --destructive: #FF8B92;
-  --destructive-foreground: #0B0B0F;
-  --border: #38343F;
-  --input: #38343F;
-  --ring: #FF2E93;
+  --background: #000000;
+  --foreground: #F5F5F5;
+  --card: #121212;
+  --card-foreground: #F5F5F5;
+  --popover: #1C1C1C;
+  --popover-foreground: #F5F5F5;
+  --primary: #F52D83;
+  --primary-hover: #FF5299;
+  --primary-foreground: #0A0A0A;
+  --secondary: #1C1C1C;
+  --secondary-foreground: #F5F5F5;
+  --muted: #121212;
+  --muted-foreground: #B0B0B0;
+  --accent: #242424;
+  --accent-foreground: #F5F5F5;
+  --destructive: #FF6B7A;
+  --destructive-foreground: #0A0A0A;
+  --surface-raised: #1C1C1C;
+  --surface-hover: #242424;
+  --disabled: #777777;
+  --border: transparent;
+  --input: #1C1C1C;
+  --ring: #F52D83;
 
-  --chart-1: #FF2E93;
-  --chart-2: #FFE5F3;
-  --chart-3: #F7F4F6;
-  --chart-4: #B9B6BE;
-  --chart-5: #38343F;
+  --chart-1: #F52D83;
+  --chart-2: #FF5299;
+  --chart-3: #F5F5F5;
+  --chart-4: #B0B0B0;
+  --chart-5: #777777;
 
-  --sidebar: #15151C;
-  --sidebar-foreground: #F7F4F6;
-  --sidebar-primary: #FF2E93;
-  --sidebar-primary-foreground: #0B0B0F;
-  --sidebar-accent: #FFE5F3;
-  --sidebar-accent-foreground: #0B0B0F;
-  --sidebar-border: #38343F;
-  --sidebar-ring: #FF2E93;
+  --sidebar: #121212;
+  --sidebar-foreground: #F5F5F5;
+  --sidebar-primary: #F52D83;
+  --sidebar-primary-foreground: #0A0A0A;
+  --sidebar-accent: #242424;
+  --sidebar-accent-foreground: #F5F5F5;
+  --sidebar-border: transparent;
+  --sidebar-ring: #F52D83;
 
   --font-body: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-barlow-condensed), "Arial Narrow", var(--font-body);
-  --type-display-size: clamp(4rem, 10vw, 10rem);
-  --type-heading-lg-size: clamp(2.5rem, 5vw, 5rem);
+  --type-display-size: clamp(3.25rem, 6vw, 4rem);
+  --type-heading-lg-size: clamp(1.875rem, 4vw, 2.25rem);
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
   --content-max: 80rem;
   --gutter-mobile: clamp(1.25rem, 5vw, 1.5rem);
   --gutter-desktop: clamp(3rem, 5vw, 4rem);
   --section-space-mobile: clamp(4rem, 12vw, 6rem);
-  --section-space-desktop: clamp(6rem, 10vw, 10rem);
+  --section-space-desktop: clamp(6rem, 10vw, 8rem);
 
   --motion-fast: 180ms;
-  --motion-reveal: 650ms;
-  --motion-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-reveal: 180ms;
+  --motion-easing: ease-out;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply outline-ring;
   }
 
   html {

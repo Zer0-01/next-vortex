@@ -1,153 +1,149 @@
 ---
-name: Vortex Academia — Move Together
+name: Pink Noir
 colors:
-  primary: "#FF2E93"
-  primary-foreground: "#0B0B0F"
-  surface: "#0B0B0F"
-  surface-raised: "#15151C"
-  on-surface: "#F7F4F6"
-  on-surface-muted: "#B9B6BE"
-  border: "#38343F"
-  accent-soft: "#FFE5F3"
-  error: "#FF8B92"
+  primary: "#F52D83"
+  primary-hover: "#FF5299"
+  on-primary: "#0A0A0A"
+  background: "#000000"
+  surface: "#121212"
+  surface-raised: "#1C1C1C"
+  surface-hover: "#242424"
+  on-surface: "#F5F5F5"
+  on-surface-muted: "#B0B0B0"
+  disabled: "#777777"
+  error: "#FF6B7A"
 typography:
-  display:
-    fontFamily: Barlow Condensed
-    fontSize: "clamp(64px, 10vw, 160px)"
-    fontWeight: 800
-    lineHeight: 0.88
-  heading-lg:
-    fontFamily: Barlow Condensed
-    fontSize: "clamp(40px, 5vw, 80px)"
-    fontWeight: 700
-    lineHeight: 0.95
+  heading:
+    fontFamily: "Barlow Condensed"
+    fontWeight: 600
   body-md:
     fontFamily: Inter
     fontSize: 16px
     fontWeight: 400
-    lineHeight: 1.6
-  label:
-    fontFamily: Inter
-    fontSize: 12px
-    fontWeight: 700
-    letterSpacing: 0.08em
 rounded:
-  sm: 4px
-  md: 8px
+  sm: 8px
+  md: 12px
   lg: 16px
-motion:
-  fast: 180ms
-  reveal: 650ms
-  easing: "cubic-bezier(0.22, 1, 0.36, 1)"
 ---
 
-# Vortex Academia — Website Design System
+# Design System
 
 ## Overview
+A dark-only, pink-accented visual language that feels considered, modern, and distinctly human. Black is the canvas; solid near-black surfaces create hierarchy through tonal contrast rather than borders, shadows, blur, or decorative effects. The interface is clean, flat, and restrained, with comfortable spacing and softly rounded corners.
 
-Vortex Academia is a Kuala Lumpur based sports community built around **football, running, mutual support, and staying healthy together**. Sessions happen in different locations. The landing page introduces the community to members, local supporters, the wider public, and potential partners. Its main outcome is for visitors to want to follow what Vortex Academia does on Instagram.
-
-The design is a **modern sports collective**: dark, energetic, confident, and human. A strong editorial layout and expressive movement give it the feel of sport, while real people and shared moments convey community. Football and running receive equal attention. The page should not read like a membership sales page or a football club site with running added as an afterthought.
-
-This document adapts the earlier Vortex Academia brand palette for the website. That earlier concept also included a wolf crest and a tagline; neither is an approved website asset under the current brief. Use a typographic wordmark until a final logo is supplied. Do not present a slogan, founding year, membership count, results, partners, or event dates as fact without confirmation.
+This is a visual and editorial system, not a feature specification. Apply it consistently regardless of page content.
 
 ## Design Principles
+- **Dark only:** No light theme, theme toggle, or light-mode variants.
+- **Borderless by default:** Distinguish elements using solid background values, spacing, alignment, scale, and typography—not visible strokes or dividers.
+- **Flat means flat:** No gradients, glassmorphism, backdrop blur, glow, skeuomorphism, or ornamental shadows.
+- **Pink with purpose:** Use the accent for clear actions, selected states, and small points of emphasis. Do not flood the interface with pink.
+- **Clear hierarchy:** Every element should earn its visual weight. Prefer fewer, better-defined layers over nested boxes.
+- **Human, not generated:** Avoid overly polished template patterns, generic marketing phrases, filler labels, and decorative clutter.
 
-1. **People move the story:** Lead with togetherness, shared effort, and actual participants. Performance and competition can appear, but should not dominate the tone.
-2. **One community, two activities:** Give football and running equal visual scale, image quality, and editorial space.
-3. **Bold with breathing room:** Use large type, decisive crops, and ample negative space. Keep secondary decoration restrained.
-4. **Pink signals action:** Reserve hot pink for the main action, select headlines, active states, and small graphic accents.
-5. **Timeless home, current Instagram:** Explain what the community does on the site; send visitors to Instagram for current sessions and announcements.
-6. **Motion serves the content:** Animate transitions and visual rhythm without obscuring copy or blocking access to actions.
+## Colors
 
-## Colour System
-
-| Token | Value | Use |
+| Token | Hex | Usage |
 | --- | --- | --- |
-| Primary / Vortex Pink | `#FF2E93` | Main CTA, small accents, active states, select display words |
-| Primary foreground | `#0B0B0F` | Text and icons on solid pink buttons |
-| Surface / Academia Black | `#0B0B0F` | Main page canvas |
-| Raised surface / Deep Charcoal | `#15151C` | Cards, navigation surface, grouped content |
-| On surface / Warm White | `#F7F4F6` | Headlines and primary body copy |
-| Muted text | `#B9B6BE` | Supporting copy and metadata on dark backgrounds |
-| Border | `#38343F` | Dividers and card outlines |
-| Soft Pink | `#FFE5F3` | Rare light contrast panel or small background accent |
-| Error | `#FF8B92` | Form errors if a form is added later |
+| **Primary** | `#F52D83` | Primary actions, active states, focused accents, selective emphasis |
+| **Primary hover** | `#FF5299` | Hover state for primary interactive elements |
+| **On primary** | `#0A0A0A` | Text/icons on solid pink backgrounds |
+| **Background** | `#000000` | Page and app canvas |
+| **Surface** | `#121212` | Cards, sections, controls, and foreground components |
+| **Surface raised** | `#1C1C1C` | Nested controls, elevated-by-tone components, menus |
+| **Surface hover** | `#242424` | Hover or pressed surfaces where more contrast is needed |
+| **On surface** | `#F5F5F5` | Main text and headings |
+| **On surface muted** | `#B0B0B0` | Supporting text and secondary labels |
+| **Disabled** | `#777777` | Noninteractive content, only when paired with clear disabled styling |
+| **Error** | `#FF6B7A` | Errors and destructive states |
 
-Use dark surfaces for the page rather than alternating whole sections to white. A pale panel may punctuate one moment, but should not become a competing theme. Avoid large uninterrupted pink backgrounds; the primary colour is most effective when it marks one focal point. Use dark text on solid pink controls. Verify WCAG AA contrast for text in the final implementation, including text placed over photographs; add a dark scrim behind image text when needed. Do not use colour alone to convey interaction state.
+### Color Usage
+- Keep the overall composition predominantly black and near-black.
+- Differentiate `#000000` from `#121212` by using clear solid surface blocks and intentional space around them.
+- Use `#1C1C1C` sparingly for elements nested inside `#121212`; avoid stacking too many dark layers.
+- Avoid visible borders, separator lines, white outlines, translucent panels, and semi-transparent overlays as a design language.
+- Use dark text (`#0A0A0A`), **not white text**, on filled primary-pink controls for readability.
+- Target at least **4.5:1** contrast for normal text and **3:1** for large text and meaningful non-text UI indicators. Validate color combinations in their actual state.
+- Do not introduce other accent colors without a semantic need.
 
 ## Typography
+- **Headings:** Barlow Condensed, weight 600–700. Compact, confident, and expressive; use normal sentence case unless there is an editorial reason for uppercase.
+- **Body:** Inter, weight 400, typically 14–16px, with 1.5–1.65 line-height.
+- **Labels and controls:** Inter, weight 500–600, typically 12–14px. Favor clarity over forced uppercase or excessive tracking.
+- **Text colors:** Main content `#F5F5F5`; supporting text `#B0B0B0`.
+- **Alignment:** Prefer left-aligned content. Center-align only where the composition clearly benefits.
+- **Hierarchy:** Create distinction through size, weight, line-height, and spacing—not decorative text effects.
 
-- **Display and section headings:** Barlow Condensed, 700–800. Use uppercase for short, high impact headlines; keep line heights tight and allow deliberate line breaks. Fallback: `Arial Narrow`, then a bold system sans-serif.
-- **Body and interface:** Inter, 400–600, with a system sans-serif fallback. Keep descriptive copy in sentence case. Body copy should generally be 16–18px with a comfortable 1.5–1.7 line height.
-- **Eyebrows and metadata:** Inter 12–14px, medium or bold, with modest tracking. Uppercase labels are useful for `FOOTBALL`, `RUNNING`, and `KUALA LUMPUR`, but not for paragraphs.
-- **Hierarchy:** Hero 64–160px fluid; section headings 40–80px fluid; card headings 28–40px; body 16–18px. Reduce sizes on narrow screens without shrinking the main message into ordinary paragraph scale.
-- Avoid script, faux athletic stencil, and multiple competing display fonts. Do not use condensed type for long reading passages.
+### Suggested Type Scale
+| Style | Font | Size | Weight | Line height |
+| --- | --- | --- | --- | --- |
+| Display | Barlow Condensed | 52–64px | 700 | 1.0–1.1 |
+| H1 | Barlow Condensed | 40–48px | 700 | 1.1 |
+| H2 | Barlow Condensed | 30–36px | 600 | 1.15 |
+| H3 | Barlow Condensed | 24–28px | 600 | 1.2 |
+| Body | Inter | 16px | 400 | 1.6 |
+| Body small | Inter | 14px | 400 | 1.5 |
+| Label | Inter | 12–14px | 500–600 | 1.4 |
+
+Scale down large headings sensibly on small screens; never let condensed type become crowded or unreadable.
 
 ## Layout and Spacing
+- Use an **8px spacing rhythm**, with 4px adjustments only where needed.
+- Favor generous breathing room and deliberate groupings rather than cramming content into cards.
+- Align to a consistent grid with stable content widths and predictable gutters.
+- Separate major regions through whitespace and tonal surface changes, not lines.
+- Keep component padding proportional: approximately 12–16px for compact controls and 20–32px for larger surfaces.
+- Preserve hierarchy on mobile with responsive spacing and typography; do not rely on hover for essential meaning.
 
-- Use an 8px spacing rhythm. Suggested values: 8, 16, 24, 32, 48, 64, 96, and 128px.
-- Desktop content width: up to 1280px, with 48–64px outer gutters. Mobile gutters: 20–24px. Keep long text columns around 60–70 characters.
-- Use asymmetric composition in the hero and editorial sections, but preserve clear reading order. A strong baseline grid should keep experimental crops and large type coherent.
-- Major sections need generous vertical space: approximately 96–160px on desktop and 64–96px on mobile.
-- Football and running should form a balanced pair on desktop, then become two equally prominent stacked stories on mobile.
-- Design mobile first for the key experience: the headline, community definition, and Instagram action should be clear without relying on hover, horizontal scrolling, or animation.
-
-## Landing Page Structure
-
-1. **Navigation:** Text wordmark `VORTEX ACADEMIA`, links to About, Activities, Community, and an Instagram action. Keep the mobile menu compact and accessible.
-2. **Hero — people first:** Short, original headline about moving together; one sentence identifying a KL community for football and running; primary `Follow on Instagram` CTA and secondary `Explore the community` anchor. Use expressive type and a simple arc or motion motif. Do not assume a hero photo exists.
-3. **Community introduction:** Explain the purpose in human terms: show up, support one another, play or run, and build healthier habits together. Mention Kuala Lumpur and changing session locations without naming an unconfirmed permanent venue.
-4. **Activities:** Two equal editorial features, Football and Running. Focus on the experience and people rather than invented schedules or skill requirements. Each can later accommodate a candid photograph.
-5. **Community moments:** A small set of authentic highlights when real material exists. Before that, use concise text-led moments or omit the gallery rather than fabricate event photos or testimonials.
-6. **Stay in the loop:** One prominent closing section that directs visitors to Instagram for the latest sessions, announcements, and moments. Do not build an empty upcoming-events calendar or a stale date feed.
-7. **Footer:** Wordmark, Kuala Lumpur, Instagram link, and any verified contact or partner information supplied later.
-
-This is a section order, not a requirement to fill every section with equal length. Avoid duplicating Instagram content on the page unless it adds context and can be maintained reliably.
-
-## Imagery and Graphic Language
-
-- Prioritise authentic Vortex Academia photos when available: mixed football and running scenes, arrivals, effort, encouragement, team celebrations, recovery, and candid group moments. Represent the actual community rather than generic professional athletes.
-- Seek images with room for typography, natural expressions, and varied framing. Balance dynamic action shots with quieter social moments. Keep skin tones natural and avoid heavy pink colour grading.
-- Until real photos exist, use large typography, outlined frames, cropped numerals or labels, and a restrained arc motif. Do not imply generated or stock images depict Vortex members.
-- Use circles and sweeping arcs as a subtle reference to the name “Vortex” and motion. A diagonal cut may add pace in one feature section. Avoid placing every element on a slant or using dense textures, flames, and competing sport icons.
-- Use simple outline icons only when they improve comprehension. The wordmark may be typeset as text; do not invent a wolf crest or substitute a temporary symbol as an official logo.
+## Shape and Depth
+- **Corner radii:** 8px for compact elements, 12px as the default, 16px for larger containers.
+- Use the same radius logic throughout the interface. Avoid mixing sharp rectangles, excessive pills, and unrelated rounded shapes.
+- **No visible borders.** A component's edge should be defined by its fill against the surrounding surface.
+- **No drop shadows, inner shadows, gradients, glows, or blur.** Depth comes from solid tonal contrast and layering.
+- For keyboard accessibility, a clearly visible focus indicator is required. A focus-only outline is an accessibility exception, not a decorative border.
 
 ## Components
+- **Primary buttons:** Solid `#F52D83` fill, dark `#0A0A0A` text, medium weight, 12px radius. Hover with `#FF5299`; disabled appearance must remain obvious.
+- **Secondary buttons:** Solid `#1C1C1C` surface with light text. Avoid outlined button styles.
+- **Text buttons:** Light or pink text without a surrounding shape when the action is intentionally low-emphasis.
+- **Inputs:** Solid `#1C1C1C` background, light input text, muted placeholder text, no border. Distinguish focus using a visible accessible focus treatment; use inline validation copy for errors.
+- **Cards and panels:** `#121212` fill against black, 12–16px corners, no border and no shadow. Distinguish nested content through spacing before adding another surface.
+- **Menus and popovers:** Solid near-black fills, clear padding and selected states, no transparency or glass effects.
+- **Navigation elements:** Use weight, spacing, and selective pink to indicate the current item; avoid decorative underlines and boxed borders.
+- **Icons:** Simple, consistent stroke or solid style. Use only when they improve comprehension; do not decorate every label.
+- **Motion:** Brief and restrained, primarily for state changes. Avoid bouncing entrances, scroll theatrics, looping decoration, and exaggerated easing. Respect reduced-motion preferences.
 
-- **Primary button:** Solid Vortex Pink, near black label, 8px radius, clear verb such as `Follow on Instagram`. Include an external-link indicator when appropriate.
-- **Secondary button:** Transparent or raised dark fill, 1px visible border, warm white label. Use for on-page navigation rather than a second competing social CTA.
-- **Links:** Visible underline or directional cue on hover and focus. Never rely on pink colour alone.
-- **Cards:** Raised charcoal or transparent dark surface with a subtle border, 8–16px radius. Use scale and cropping to create energy instead of heavy shadows.
-- **Navigation:** Legible against the hero; it may become a raised dark surface on scroll. Retain keyboard access and visible focus.
-- **Activity labels:** Compact uppercase identifiers for Football and Running, using the same treatment and prominence for both.
-- **Focus:** 2px or thicker high contrast outline with an offset, visible on every interactive control.
-- **Touch targets:** At least 44×44px for links, menu controls, and buttons.
+## Copywriting and Voice
+Write as a thoughtful person speaking to another person—not as a brand-template generator.
 
-## Motion and Interaction
-
-The motion character is expressive and athletic, with controlled entrances rather than constant activity.
-
-- Hero type may enter in staggered lines; arcs may sweep once; photographs may reveal through a mask as they enter view. Keep the primary message readable immediately and the Instagram CTA usable without waiting for an animation.
-- Use approximately 180–250ms for hover and press feedback and 500–800ms for major reveals. Stagger related elements by about 70–120ms.
-- Scroll movement may add depth in one or two focal sections. Avoid aggressive parallax, continuous marquee text, scroll hijacking, and repeated full screen transitions.
-- Do not autoplay sound. Avoid motion that makes text hard to track, especially on mobile.
-- Respect `prefers-reduced-motion`: remove transforms, parallax, and staggered entrances while preserving content and state changes.
-
-## Voice and Content
-
-Write in English. Sound confident, direct, encouraging, and collective. Use `we` and `together` naturally, but avoid generic motivational slogans and forced competitive claims. Describe the community accurately: football and running in Kuala Lumpur, shared support, and healthier habits. Do not promise coaching, weekly sessions, open registration, competitions, sponsorships, or fixed locations unless confirmed. Instagram is the source for current activity details; the website tells the enduring story.
-
-Sample hero direction for tone only: **“Move together. Go further.”** This is draft website copy, not an adopted slogan. Final copy should be approved before publication.
+- Be direct, specific, and conversational. Use ordinary words and short sentences when they help.
+- Tell people what matters. Prefer concrete benefits, context, and actions over vague claims.
+- Keep headlines concise and distinctive; a heading does not need a dramatic slogan.
+- Make labels and buttons explicit about what happens next.
+- Avoid inflated language such as “revolutionize,” “unlock your potential,” “seamless experience,” “next-level,” or “empower your journey” unless genuinely justified by the content.
+- Avoid repetitive three-part taglines, artificial enthusiasm, excessive exclamation marks, emoji-as-decoration, and generic calls to action.
+- Vary sentence rhythm naturally. Do not force every section into the same headline / paragraph / button formula.
+- Prefer a calm, confident tone over hype. Do not invent testimonials, metrics, promises, or urgency.
 
 ## Do's and Don'ts
 
-- **Do** make the primary Instagram action visible early and repeat it at the close.
-- **Do** treat football and running as peers and show the shared community around both.
-- **Do** use the established hot pink `#FF2E93` against the dark palette.
-- **Do** make the design credible before real photos or a final logo exist.
-- **Do** preserve readable contrast, keyboard focus, and reduced motion support.
-- **Don't** present the older wolf crest or tagline as approved website identity without a new decision.
-- **Don't** fabricate photos, dates, testimonials, membership numbers, or social proof.
-- **Don't** make the page feel like a professional team recruitment pitch or a fitness product funnel.
-- **Don't** use pink for every headline, button, border, and background at once.
+### Do
+- Use black as the main canvas and clearly differentiated near-black fills for components.
+- Keep pink selective and functional.
+- Use Barlow Condensed for headings and Inter for everything else.
+- Keep geometry soft and consistent.
+- Let whitespace, scale, alignment, and type create the visual structure.
+- Write useful, natural copy with specific meaning.
+- Check contrast, keyboard focus, responsive behavior, and readability.
+
+### Don't
+- Add light mode, gradients, glass effects, blur, shadows, or glows.
+- Add borders or hairline dividers to establish hierarchy.
+- Make every component pink or visually loud.
+- Use decorative blobs, floating shapes, fake dashboard imagery, unnecessary badges, or templated hero compositions merely to fill space.
+- Rely on overly polished, generic AI-style marketing language.
+- Combine unrelated corner radii or introduce inconsistent spacing.
+- Sacrifice accessibility to preserve minimalism.
+
+## Final Design Check
+Before calling a screen complete, confirm that it is dark-only, visibly separates black and near-black surfaces, has no decorative borders/effects, uses pink sparingly, follows both font families and the radius/spacing scale, remains accessible, and reads like it was written by a real person.

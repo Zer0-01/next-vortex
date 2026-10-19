@@ -35,7 +35,7 @@ const mobileNavigationLinkClassName =
 
 export function SiteHeader() {
   return (
-    <header className="relative z-20 border-b border-border/70">
+    <header className="relative z-20 bg-card">
       <a
         href="#main-content"
         className="sr-only rounded-md bg-primary px-4 py-3 font-semibold text-primary-foreground focus:not-sr-only focus:absolute focus:left-6 focus:top-4"
@@ -46,7 +46,7 @@ export function SiteHeader() {
         <Link
           href="/"
           aria-label="Vortex Academia home"
-          className="inline-flex items-center gap-2.5 font-heading text-xl font-extrabold uppercase leading-none tracking-[-0.02em]"
+          className="inline-flex items-center gap-2.5 font-heading text-xl font-semibold leading-none"
         >
           <Image
             src="/images/logo-dark.png"
@@ -102,7 +102,7 @@ export function SiteHeader() {
                 <button
                   type="button"
                   aria-label="Open navigation menu"
-                  className="flex size-11 items-center justify-center rounded-md border border-border transition-colors duration-fast hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="flex size-11 items-center justify-center rounded-md bg-secondary transition-colors duration-fast hover:bg-surface-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 />
               }
             >
@@ -110,10 +110,10 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent
               side="left"
-              className="w-[min(88vw,22rem)] gap-0 border-border bg-card p-0"
+              className="w-[min(88vw,22rem)] gap-0 border-0 bg-card p-0"
             >
-              <SheetHeader className="border-b border-border px-6 py-6 text-left">
-                <SheetTitle className="flex items-center gap-3 font-heading text-xl font-extrabold uppercase tracking-[-0.02em]">
+              <SheetHeader className="px-6 py-6 text-left">
+                <SheetTitle className="flex items-center gap-3 font-heading text-xl font-semibold">
                   <Image
                     src="/images/logo-dark.png"
                     alt=""
@@ -133,14 +133,14 @@ export function SiteHeader() {
                 className="flex flex-col gap-1 px-4 py-6"
               >
                 <Collapsible>
-                  <CollapsibleTrigger className="group/squad flex min-h-14 w-full items-center justify-between rounded-md px-4 font-heading text-3xl font-bold uppercase tracking-[-0.02em] transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                  <CollapsibleTrigger className="group/squad flex min-h-14 w-full items-center justify-between rounded-md px-4 font-heading text-2xl font-semibold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                     Squad
                     <ChevronDown
                       aria-hidden="true"
                       className="size-5 transition-transform duration-fast group-data-panel-open/squad:rotate-180"
                     />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="ml-4 border-l border-border pl-2 data-ending-style:animate-out data-ending-style:fade-out data-starting-style:animate-in data-starting-style:fade-in">
+                  <CollapsibleContent className="ml-4 pl-2 data-ending-style:animate-out data-ending-style:fade-out data-starting-style:animate-in data-starting-style:fade-in">
                     <SheetClose
                       nativeButton={false}
                       render={
@@ -165,13 +165,12 @@ export function SiteHeader() {
                     </SheetClose>
                   </CollapsibleContent>
                 </Collapsible>
-                <div className="my-3 border-t border-border" />
                 <SheetClose
                   nativeButton={false}
                   render={
                     <Link
                       href="/gallery"
-                      className="flex min-h-14 w-full items-center rounded-md px-4 font-heading text-3xl font-bold uppercase tracking-[-0.02em] transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      className="flex min-h-14 w-full items-center rounded-md px-4 font-heading text-2xl font-semibold transition-colors duration-fast hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     />
                   }
                 >
