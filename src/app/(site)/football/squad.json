@@ -1,0 +1,39 @@
+{
+  "positions": [
+    {
+      "label": "Forward / Winger",
+      "players": [
+        "Syakir",
+        "Syabil",
+        "Hadi",
+        "Lamil",
+        "Gp",
+        "Komeng",
+        "Ipan",
+        "Manlan",
+        "Palat"
+      ]
+    },
+    {
+      "label": "Midfielder",
+      "players": ["Mil", "Fit", "Hahafix", "Wafiq"]
+    },
+    {
+      "label": "Defender",
+      "players": [
+        "Paredo",
+        "Lan",
+        "Yen",
+        "Den",
+        "Mat",
+        "Acai",
+        "Yoni Tielemans",
+        "Nap"
+      ]
+    },
+    {
+      "label": "Goalkeeper",
+      "players": ["Zaim", "Niq"]
+    }
+  ]
+}
