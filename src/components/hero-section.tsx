@@ -134,7 +134,7 @@ export function HeroSection({
                   src={image.src}
                   alt={image.alt}
                   fill
-                  priority
+                  loading="eager"
                   sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 46vw, 30vw"
                   style={{ objectPosition: image.objectPosition }}
                   className="object-cover transition-transform duration-reveal ease-vortex group-hover:scale-[1.015]"

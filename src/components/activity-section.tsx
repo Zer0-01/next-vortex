@@ -18,6 +18,7 @@ const activities = [
       src: "/images/team-photo-6.jpeg",
       alt: "Vortex Academia football players gathered for a team photo on the pitch",
       objectPosition: "50% 58%",
+      loading: "lazy",
     },
     contact: {
       href: "https://wa.me/60179289440",
@@ -33,6 +34,7 @@ const activities = [
       src: "/images/apiz-running.jpeg",
       alt: "Vortex Academia runners taking part in a road race",
       objectPosition: "50% 43%",
+      loading: "eager",
     },
     contact: {
       href: "https://wa.me/601163952301",
@@ -86,6 +88,7 @@ export function ActivitySection({ instagramHref }: ActivitySectionProps) {
                     src={activity.image.src}
                     alt={activity.image.alt}
                     fill
+                    loading={activity.image.loading}
                     sizes="(max-width: 1023px) calc(100vw - 40px), 42vw"
                     style={{ objectPosition: activity.image.objectPosition }}
                     className="object-cover transition-transform duration-reveal ease-vortex group-hover:scale-[1.015]"
